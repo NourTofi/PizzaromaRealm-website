@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PizzaromaRealm</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <section id="Home">
+        <nav>
+            <div class="logo">
+                <h2>PizzaromaRealm</h2>
+            </div>
+
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Menu">Menu</a></li>
+                <li><a href="#Special">Special</a></li>
+                <li><a href="#Gallary">Gallery</a></li>
+                <li><a href="#Review">Review</a></li>
+                <li><a href="#Order">Order</a></li>
+            </ul>
+
+            <div class="mode-toggle" onclick="darkMode()">
+                <span>Dark Mode</span>
+                <i class="fa-solid fa-moon"></i>
+            </div>
+
+
+        </nav>
+
+        <div class="clock-container">
+            <div id="clock">15:00</div>
+        </div>
+
+        <div class="main">
+
+
+
+            <div class="men_text">
+                <h1>Get Fresh<span>Pizza</span><br>Delivered Hot</h1>
+            </div>
+
+            <div class="main_image">
+                <img src="image/main_img.jpg">
+            </div>
+
+        </div>
+
+        <p id="main-p">
+            Dive into the world of exquisite pizzas, where every bite is a blend of fresh ingredients, rich flavors, and
+            authentic recipes. Every slice tells a story of tradition mixed with innovation. From the classic Margherita
+            to our gourmet specials, we bring the best of pizza right to your doorstep. Join us on this delectable
+            journey, and discover the true taste of pizza, baked to perfection.
+
+        </p>
+
+        <div id="myPopup" class="popup-box hidden">
+            <div class="box-content">
+                <h2 class="popup-title">Ordering Pizza</h2>
+                <p class="popup-description">Choose your favorite toppings and place your order.</p>
+                <button class="popup-order-btn" onclick="orderNowPopup()">Order Now</button>
+                <span class="close-icon" onclick="orderNowPopup()">&times;</span>
+            </div>
+        </div>
+
+
+
+        <div class="main_btn" onclick="orderNowPopup()">
+            <button>Order Now</button>
+            <i class="fa-solid fa-angle-right"></i>
+        </div>
+
+    </section>
+
+    <!--About-->
+
+    <div class="about" id="About">
+        <div class="about_main">
+
+            <div class="image">
+                <img src="image/Food-Plate.jpg">
+            </div>
+
+            <div class="about_text">
+                <h1><span>About</span>Us</h1>
+                <h3>Why Choose Us?</h3>
+                <p>
+                    At PizzaromaRealm, our passion is pizza. Every dough is hand-kneaded, every sauce is
+                    carefully simmered, and every topping is handpicked. From the heart of Italy to your plate, we
+                    strive to bring an authentic experience that merges tradition with modern tastes. Why choose us?
+                    Because our pizzas are not just meals; they're memories. They're the culmination of years of
+                    experience, love for the craft, and dedication to quality. Whether it's the classic Margherita or a
+                    gourmet special, we put our heart into every slice. Experience the symphony of flavors and the
+                    warmth of genuine pizza love with us. Join our pizza family and embark on a delicious journey!
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--Menu-->
+
+    <div class="menu" id="Menu">
+        <h1>Our<span>Menu</span></h1>
+
+        <div class="menu_box">
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="image/Mediterranean Mirage.jpg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2 id="pizzaName1">Mediterranean Mirage</h2>
+                    <p>
+                        A pizza topped with feta cheese.
+                    </p>
+                    <h3>$10.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <input class="input-number" id="pizzaQuantity1" type="number" placeholder="Select pizza quantity">
+                    <a href="#Order" class="menu_btn">Order Now</a>
+                </div>
+
+            </div>
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="image/Basil Bliss.jpg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2 id="pizzaName2">Basil Bliss</h2>
+                    <p>
+                        A Margherita-inspired pizza with fresh buffalo mozzarella and ripe tomatoes.
+                    </p>
+                    <h3>$20.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <input id="pizzaQuantity2" class="input-number" type="number" placeholder="Select pizza quantity">
+                    <a href="#Order" class="menu_btn">Order Now</a>
+                </div>
+
+            </div>
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="image/Carnivores Carnival.jpg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2 id="pizzaName3">Carnivores Carnival</h2>
+                    <p>
+                        Loaded with pepperoni and sausage.
+                    </p>
+                    <h3>$28.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <input id="pizzaQuantity3" class="input-number" type="number" placeholder="Select pizza quantity">
+                    <a href="#Order" class="menu_btn">Order Now</a>
+                </div>
+
+            </div>
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="image/Pesto Prestige.jpg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2 id="pizzaName4">Pesto Prestige</h2>
+                    <p>
+                        A green pesto base topped with sun-dried tomatoes, grilled chicken, and mozzarella.
+                    </p>
+                    <h3>$30.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <input id="pizzaQuantity4" class="input-number" type="number" placeholder="Select pizza quantity">
+                    <a href="#Order" class="menu_btn">Order Now</a>
+                </div>
+
+            </div>
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="image/Tropic Thunder.jpg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2 id="pizzaName5">Tropic Thunder</h2>
+                    <p>
+                        Pineapple chunks, ham, red pepper flakes, and a hint of BBQ drizzle.
+                    </p>
+                    <h3>$13.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <input id="pizzaQuantity5" class="input-number" type="number" placeholder="Select pizza quantity">
+                    <a href="#Order" class="menu_btn">Order Now</a>
+                </div>
+
+            </div>
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="image/Fiery Fungi.jpg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2 id="pizzaName6">Fiery Fungi</h2>
+                    <p>
+                        White pizza with an array of mushrooms and a spicy garlic oil drizzle.
+                    <h3>$19.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <input id="pizzaQuantity6" class="input-number" type="number" placeholder="Select pizza quantity">
+                    <a href="#Order" class="menu_btn">Order Now</a>
+                </div>
+
+            </div>
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="image/Veggie Voyager.jpg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2 id="pizzaName7">Veggie Voyager</h2>
+                    <p>
+                        A vegetarian delight with bell peppers, onions and mushrooms.
+                    <h3>$22.52</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <input id="pizzaQuantity7" class="input-number" type="number" placeholder="Select pizza quantity">
+                    <a href="#Order" class="menu_btn">Order Now</a>
+                </div>
+
+            </div>
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="image/Cheese Chariot.jpg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2 id="pizzaName8">Cheese Chariot</h2>
+                    <p>
+                        Featuring four different kinds of cheese: mozzarella, feta, cheddar, and ricotta.
+                    </p>
+                    <h3>$10.50</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <input id="pizzaQuantity8" class="input-number" type="number" placeholder="Select pizza quantity">
+                    <a href="#Order" class="menu_btn">Order Now</a>
+                </div>
+
+            </div>
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="image/Smokey Siesta.jpg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2 id="pizzaName9">Smokey Siesta</h2>
+                    <p>
+                        Smoked salmon, red onion, capers, and cream cheese.
+                    </p>
+                    <h3>$8.99.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <input id="pizzaQuantity9" class="input-number" type="number" placeholder="Select pizza quantity">
+                    <a href="#Order" class="menu_btn">Order Now</a>
+                </div>
+
+            </div>
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="image/Desert Delight.jpg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2 id="pizzaName10">Desert Delight</h2>
+                    <p>
+                        Cinnamon sugar, apple slices; sweet caramelized treat. </p>
+                    <h3>$25.38</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <input id="pizzaQuantity10" class="input-number" type="number" placeholder="Select pizza quantity">
+                    <a href="#Order" class="menu_btn">Order Now</a>
+                </div>
+
+            </div>
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="image/The Olive Odyssey.jpg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2 id="pizzaName11">The Olive Odyssey</h2>
+                    <p>
+                        Black, green olives; feta and rosemary twist. </p>
+                    <h3>$16.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <input id="pizzaQuantity11" class="input-number" type="number" placeholder="Select pizza quantity">
+                    <a href="#Order" id="orderButton" class="menu_btn">Order Now</a>
+                </div>
+
+            </div>
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="image/Gourmet Gorgonzola.jpg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2 id="pizzaName12">Gourmet Gorgonzola</h2>
+                    <p>
+                        Gorgonzola, pear, walnuts; sweetened.
+                    </p>
+                    <h3>$20.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <input id="pizzaQuantity12" class="input-number" type="number" placeholder="Select pizza quantity">
+                    <a href="#Order" class="menu_btn">Order Now</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- special -->
+
+
+    <div class="special" id="Special">
+        <h1>Today<span>special</span></h1>
+        <div class="special-box">
+            <img id="content-image" src="image/gallary_1.png">
+            <div class="special-order">
+                <h2 id="title-text">Special Pizza</h2>
+                <h3 id="description-text">Feast your eyes on today's special!</h3>
+                <div class="buttons-container">
+                    <button onclick="updateContent()">Next Special</button>
+                    <a href="#">
+                        <button onclick="updateClock()">Order this special</button>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+
+    <!--Gallary-->
+
+    <div class="gallary" id="Gallary">
+        <h1>Our<span>Gallary</span></h1>
+
+        <div class="gallary_image_box">
+            <div class="gallary_image">
+                <img src="image/gallary_1.png">
+                <h3>Veggie Vitality</h3>
+                <p>
+                    A vibrant array of fresh vegetables — bell peppers, olives, onions — on a golden crust. Nature's
+                    bounty in every slice.
+                </p>
+
+                <a href="#" class="gallary_btn">Order Now</a>
+            </div>
+
+            <div class="gallary_image">
+                <img src="image/gallary_2.png">
+
+                <h3>Spicy Diavolo</h3>
+                <p>
+                    Hot jalapeños, spicy sausage, and red chili flakes create a fiery symphony. Not for the
+                    faint-hearted but for the spice lovers.
+                </p>
+                <a href="#" class="gallary_btn">Order Now</a>
+            </div>
+
+            <div class="gallary_image">
+                <img src="image/gallary_3.png">
+
+                <h3>BBQ Bliss</h3>
+                <p>
+                    Smoky barbecue sauce meets tender chicken and red onions. A rustic taste sensation designed for
+                    indulgence.
+                </p>
+                <a href="#" class="gallary_btn">Order Now</a>
+            </div>
+
+            <div class="gallary_image">
+                <img src="image/gallary_4.png">
+
+                <h3>White Garlic Wonder</h3>
+                <p>
+                    Creamy white sauce base with garlic undertones, complemented by mushrooms and spinach. A gourmet's
+                    choice.
+                </p>
+                <a href="#" class="gallary_btn">Order Now</a>
+            </div>
+
+            <div class="gallary_image">
+                <img src="image/gallary_5.png">
+
+                <h3>Pepperoni Passion</h3>
+                <p>
+                    Savory pepperoni slices spread generously atop a cheesy delight. A bite that takes you to pizza
+                    paradise.
+                </p>
+                <a href="#" class="gallary_btn">Order Now</a>
+            </div>
+
+            <div class="gallary_image">
+                <img src="image/gallary_6.png">
+
+                <h3>Classic Margherita</h3>
+                <p>
+                    Tantalizingly fresh tomatoes paired with aromatic basil and rich mozzarella. Experience the heart of
+                    Italian flavors.
+                </p>
+                <a href="#" class="gallary_btn">Order Now</a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!--Review-->
+
+    <div class="review" id="Review">
+        <h1>Customer<span>Review</span></h1>
+
+        <div class="review_box">
+            <div class="review_card">
+
+                <div class="review_profile">
+                    <img src="image/review_1.png">
+                </div>
+
+                <div class="review_text">
+                    <h2 class="name">John Deo</h2>
+
+                    <div class="review_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+
+                    <div class="review_social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+
+                    <p>
+                        Your pizza is simply divine! The crust was perfectly crispy, and the toppings were fresh and
+                        flavorful. It genuinely felt like I was having a slice straight from Italy! </p>
+
+                </div>
+
+            </div>
+
+            <div class="review_card">
+
+                <div class="review_profile">
+                    <img src="image/review_2.png">
+                </div>
+
+                <div class="review_text">
+                    <h2 class="name">John Deo</h2>
+
+                    <div class="review_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+
+                    <div class="review_social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+
+                    <p>
+                        Loved the balance of cheese and sauce on your Margherita. Just wish there was a bit more basil.
+                        Still, one of the best I've tasted in town. </p>
+
+                </div>
+
+            </div>
+
+            <div class="review_card">
+
+                <div class="review_profile">
+                    <img src="image/review_3.png">
+                </div>
+
+                <div class="review_text">
+                    <h2 class="name">John Deo</h2>
+
+                    <div class="review_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+
+                    <div class="review_social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+
+                    <p>
+                        The Pesto Prestige is a game-changer. Every bite was a burst of fresh pesto goodness paired
+                        perfectly with the sun-dried tomatoes. Highly recommend! </p>
+
+                </div>
+
+            </div>
+
+            <div class="review_card">
+
+                <div class="review_profile">
+                    <img src="image/review_4.png">
+                </div>
+
+                <div class="review_text">
+                    <h2 class="name">John Deo</h2>
+
+                    <div class="review_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+
+                    <div class="review_social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+
+                    <p>
+                        I've tried a lot of meat pizzas, but your Carnivores Carnival is top-tier. The blend of meats
+                        is perfect, and it doesn't feel too greasy. Absolute perfection! </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!--Order-->
+
+    <div class="order" id="Order">
+        <h1><span>Order</span>Now</h1>
+
+        <div class="order_main">
+
+            <div class="order_image">
+                <img src="image/order_image.png">
+            </div>
+
+            <form name="form">
+
+                <div class="input">
+                    <p>Name</p>
+                    <input type="text" placeholder="your name" name="name">
+                    <div id="name-error"></div>
+                </div>
+
+                <div class="input">
+                    <p>Email</p>
+                    <input type="email" placeholder="your email" name="email">
+                    <div id="email-error"></div>
+                </div>
+
+                <div class="input" id="number">
+                    <p>Number</p>
+                    <input type="number" placeholder="your number" name="number">
+                    <div id="number-error"></div>
+                </div>
+
+                <div class="input">
+                    <p>Address</p>
+                    <input placeholder="you Address" name="address">
+                    <div id="address-error"></div>
+                </div>
+
+                <button class="order_btn" onclick="validated(event)">Add info</button>
+                <button class="card-order" onclick="showOrder()">Order now</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <!--Team-->
+
+    <div class="team">
+        <h1>Our<span>Team</span></h1>
+
+        <div class="team_box">
+            <div class="profile">
+                <img src="image/chef1.png">
+
+                <div class="info">
+                    <h2 class="name">Chef</h2>
+                    <p class="bio">New Yorker; pioneers experimental, boundary-pushing pizza flavors.</p>
+
+                    <div class="team_icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="profile">
+                <img src="image/chef2.png">
+
+                <div class="info">
+                    <h2 class="name">Chef</h2>
+                    <p class="bio">Barcelona native; champions vegan, sustainable, delectable pizzas.</p>
+
+                    <div class="team_icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="profile">
+                <img src="image/chef3.png">
+
+                <div class="info">
+                    <h2 class="name">Chef</h2>
+                    <p class="bio">Mumbai roots; fuses Indian flavors with Italian classics.</p>
+
+                    <div class="team_icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="profile">
+                <img src="image/chef4.png">
+
+                <div class="info">
+                    <h2 class="name">Chef</h2>
+                    <p class="bio">Naples-born; crafts authentic pizzas, values tradition, innovation.</p>
+
+                    <div class="team_icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!--Footer-->
+
+    <footer>
+        <div class="footer_main">
+
+            <div class="footer_tag">
+                <h2>Location</h2>
+                <p>Sri Lanka</p>
+                <p>USA</p>
+                <p>India</p>
+                <p>Japan</p>
+                <p>Italy</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Quick Link</h2>
+                <p>Home</p>
+                <p>About</p>
+                <p>Menu</p>
+                <p>Gallery</p>
+                <p>Order</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Contact</h2>
+                <p>+31 352-2795</p>
+                <p>minicodeleader@gmail.com</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Our Service</h2>
+                <p>Fast Delivery</p>
+                <p>Easy Payments</p>
+                <p>24 x 7 Service</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Follows</h2>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+
+        </div>
+
+        <p class="end">Design by<span>minicodeleader</span></p>
+
+    </footer>
+
+
+
+
+</body>
+
+</html>
